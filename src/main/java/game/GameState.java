@@ -4,7 +4,7 @@ import model.*;
 
 import java.util.ArrayList;
 
-public class gameState {
+public class GameState {
 
     private ArrayList <Team> teams;
 
@@ -18,7 +18,14 @@ public class gameState {
 
     private SuitName hokme;
 
+    private static GameState gameState;
 
+    private GameState(){}
+
+    public static GameState getInstance(){
+        if (gameState==null)gameState=new GameState();
+        return gameState;
+    }
 
 
 

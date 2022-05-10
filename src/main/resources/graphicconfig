@@ -1,0 +1,4 @@
+RESOURCE_URL =src
+FRAME_CONFIG_FILE = resorces\\FirstPanelConfigFile.Properties
+FIRSTPANEL_CONFIG_FILE = resorces\\MainFrameConfigFile.Properties
+Constants = resorce\\ConstantsConfigFile.Properties
