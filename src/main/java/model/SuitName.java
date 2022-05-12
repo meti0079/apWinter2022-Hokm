@@ -9,14 +9,21 @@ public enum SuitName {
     ;
 
     private final int value;
-     SuitName(int val){
+    SuitName(int val){
         this.value=val;
     }
 
     public int getSuit(){
          return this.value;
     }
+    public static SuitName getSuitName(int value){
+         if (value==0){
+             return Heart;
+         }
 
+//         return  ;
+         return null;
+    }
 
 
 }

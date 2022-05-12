@@ -5,13 +5,17 @@ private int suit;
 private int value;
 private SuitName suitName;
 private  ValueName valueName;
+private boolean isFace;
 
 
 public Card(SuitName suitName, ValueName valueName){
     this.suitName=suitName;
+
     this.valueName=valueName;
     this.suit=suitName.getSuit();
     this.value=valueName.getValue();
+    if (value>10 && value<14)
+        isFace=true;
 }
 
     public int getSuit() {
@@ -46,7 +50,9 @@ public Card(SuitName suitName, ValueName valueName){
         this.valueName = valueName;
     }
 
-
+    public boolean isFace(){
+    return isFace;
+    }
 
     public int compareTo(Card other){
     if (this.suit== other.getSuit() && this.value == other.getValue())

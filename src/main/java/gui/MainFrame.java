@@ -10,19 +10,19 @@ public class MainFrame extends JFrame {
 private FrameConfig frameConfig;
 public  MainFrame(){
     addKeyListener(new Keyboard());
-    FirstPanel p= new FirstPanel();
+    init();
+    FirstPanel p= new FirstPanel(this);
     add(p);
     setVisible(true);
-    frameInit();
+
     pack();
 }
 
-    @Override
-    protected void frameInit() {
+  private void  init() {
     frameConfig= new FrameConfig("FRAME_CONFIG_FILE");
     configFrame();
-   setLocationRelativeTo(null);
-
+    setLocationRelativeTo(null);
+    setLocation(0,0);
 
     }
 
@@ -31,4 +31,9 @@ public  MainFrame(){
         setDefaultCloseOperation(3);
         setResizable(frameConfig.isResizable());
     }
+    public void update(){
+    repaint();
+    revalidate();
+    }
+
 }

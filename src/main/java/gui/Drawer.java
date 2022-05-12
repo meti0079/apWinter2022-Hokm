@@ -14,9 +14,7 @@ public class Drawer {
 
 
     }
-    private void drawPlayerCard(){
-        //TODO
-    }
+
     private void drawOtherCard(){
         //TODO
     }

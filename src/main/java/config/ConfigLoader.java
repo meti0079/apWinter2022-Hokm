@@ -14,7 +14,7 @@ public class ConfigLoader {
     private static ConfigLoader loader;
     private String addressName;
     private HashMap<String, Configs> addressess;
-    private static String defaultAddress = "src/resorces/graphicconfig";
+    private static String defaultAddress = "src/main/resources/graphicconfig";
  
     private HashMap<String, Configs> frameConfigs;
     private HashMap<String, Configs> panelConfigs;
@@ -35,6 +35,7 @@ public class ConfigLoader {
         frameConfigs = new HashMap<>();
         panelConfigs = new HashMap<>();
         addressess = new HashMap<>();
+//        System.out.println(address+"    address");
         try {
             Configs addresses = new Configs();
             reader = new FileReader(address);
@@ -42,7 +43,7 @@ public class ConfigLoader {
             this.addressess.put(addressName, addresses);
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("main config file doesn't exist");
+            System.out.println("main config file doesn't exist 11");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -63,7 +64,7 @@ public class ConfigLoader {
                 Configs property = new Configs();
                 try {
                     File test = new File(adrs);
-//                    System.out.println(test.getAbsolutePath());
+                    System.out.println(test.getAbsolutePath());
                     FileReader reader = new FileReader(test);
                     property.load(reader);
 
@@ -99,6 +100,7 @@ public class ConfigLoader {
             if (address.equals("default")) {
                 address = defaultAddress;
             }
+//            System.out.println(address+"  2222");
             loader = new ConfigLoader(address);
         }
         return loader;

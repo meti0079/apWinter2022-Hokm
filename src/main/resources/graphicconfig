@@ -1,4 +1,4 @@
-RESOURCE_URL =src
-FRAME_CONFIG_FILE = resorces\\FirstPanelConfigFile.Properties
-FIRSTPANEL_CONFIG_FILE = resorces\\MainFrameConfigFile.Properties
-Constants = resorce\\ConstantsConfigFile.Properties
+RESOURCE_URL =src\\main
+FIRSTPANEL_CONFIG_FILE = C:\\Users\\Mehdi\\IdeaProjects\\Hokm\\src\\main\\resources\\FirstPanelConfigFile.Properties
+FRAME_CONFIG_FILE=C:\\Users\\Mehdi\\IdeaProjects\\Hokm\\src\\main\\resources\\MainFrameConfigFile.Properties
+Constants = C:\\Users\\Mehdi\\IdeaProjects\\Hokm\\src\\main\\resources\\ConstantsConfigFile.Properties
