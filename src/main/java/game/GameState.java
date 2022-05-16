@@ -1,6 +1,9 @@
 package game;
 
 import model.*;
+import model.card.Card;
+import model.card.CardList;
+import model.card.SuitName;
 
 import java.util.ArrayList;
 
@@ -12,12 +15,13 @@ public class GameState {
     private ArrayList<Card> played;
     private ArrayList<Card> onTable;
     private CardList cardList;
-    private int turn;
+
+    private int round;
+
     private SuitName hokme;
     private SuitName tableCard;
+
     private static GameState gameState;
-
-
 
     private GameState(){
         played=new ArrayList<>();
@@ -29,7 +33,6 @@ public class GameState {
     public static GameState getInstance(){
         if (gameState==null)gameState=new GameState();
         return gameState;
-
     }
 
     public SuitName getTableCard() {
@@ -111,4 +114,6 @@ public class GameState {
     public void setTurn(int turn) {
         this.turn = turn;
     }
+
+   
 }

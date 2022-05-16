@@ -1,14 +1,13 @@
-package model;
+package model.card;
 
 public class Card {
-private int suit;
-private int value;
-private SuitName suitName;
-private  ValueName valueName;
-private boolean isFace;
+    private int suit;
+    private int value;
+    private SuitName suitName;
+    private CardValueName valueName;
+    private boolean isFace;
 
-
-public Card(SuitName suitName, ValueName valueName){
+public Card(SuitName suitName, CardValueName valueName){
     this.suitName=suitName;
 
     this.valueName=valueName;
@@ -42,11 +41,11 @@ public Card(SuitName suitName, ValueName valueName){
         this.suitName = suitName;
     }
 
-    public ValueName getValueName() {
+    public CardValueName getValueName() {
         return valueName;
     }
 
-    public void setValueName(ValueName valueName) {
+    public void setValueName(CardValueName valueName) {
         this.valueName = valueName;
     }
 

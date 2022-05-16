@@ -1,6 +1,6 @@
 package config;
 
-public class FrameConfig  extends SwingConfig {
+public class FrameConfig extends SwingConfig {
 	private String closeOperation;
 	private boolean resizable;
 
@@ -8,11 +8,13 @@ public class FrameConfig  extends SwingConfig {
 		super(name);
 		initialize();
 	}
+
 	protected void initialize() {
 		super.initialize();
 		closeOperation = properties.getProperty("CloseOperation");
 		resizable = properties.readBoolean("Resizable");
 	}
+
 	public boolean isResizable() {
 		return resizable;
 	}
@@ -23,7 +25,6 @@ public class FrameConfig  extends SwingConfig {
 		}
 		return Integer.parseInt(closeOperation);
 	}
-
 
 	@Override
 	protected void setProperties() {

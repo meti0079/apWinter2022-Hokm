@@ -1,29 +1,29 @@
 package gui;
 
-import Listeners.Keyboard;
 import config.FrameConfig;
+import gui.controller.GameController;
+import listeners.KeyboardListener;
 
 import javax.swing.*;
 import java.awt.*;
 
 public class MainFrame extends JFrame {
-private FrameConfig frameConfig;
-public  MainFrame(){
-    addKeyListener(new Keyboard());
-    init();
-    FirstPanel p= new FirstPanel(this);
-    add(p);
-    setVisible(true);
+    private FrameConfig frameConfig;
 
-    pack();
-}
+    public MainFrame(GameController controller) {
+        init();
+        FirstPanel p = new FirstPanel(this, controller);
+        add(p);
+        setVisible(true);
+        pack();
+    }
 
-  private void  init() {
-    frameConfig= new FrameConfig("FRAME_CONFIG_FILE");
-    configFrame();
-    setLocationRelativeTo(null);
-    setLocation(0,0);
-
+    private void init() {
+        addKeyListener(new KeyboardListener());
+        frameConfig= new FrameConfig("FRAME_CONFIG_FILE");
+        configFrame();
+        setLocationRelativeTo(null);
+        setLocation(0,0);
     }
 
     private void configFrame() {
@@ -31,9 +31,9 @@ public  MainFrame(){
         setDefaultCloseOperation(3);
         setResizable(frameConfig.isResizable());
     }
-    public void update(){
-    repaint();
-    revalidate();
-    }
 
+    public void update() {
+        repaint();
+        revalidate();
+    }
 }

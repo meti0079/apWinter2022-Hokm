@@ -7,10 +7,11 @@ public abstract class SwingConfig {
 
 	private int width, height;
 
-	public SwingConfig(String name) {
+	protected SwingConfig(String name) {
 		this.name = name;
 		setProperties();
 	}
+
 	protected void initialize() {
 		width = properties.readInteger("width");
 		height = properties.readInteger("height");
@@ -25,7 +26,6 @@ public abstract class SwingConfig {
 	}
 
 	protected abstract void setProperties();
-
 }
 
 
