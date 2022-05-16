@@ -1,8 +1,13 @@
-package model;
+package model.player;
 
 import java.util.ArrayList;
 
-public  abstract class  Player {
+import game.GameState;
+import model.Team;
+import model.card.Card;
+import model.card.SuitName;
+
+public abstract class Player {
 
     private Team team;
     private boolean isHuman;
@@ -11,12 +16,12 @@ public  abstract class  Player {
     private boolean isHakem;
     private int index;
 
-    public Player (){
-        hand=new ArrayList<>();
+    private final int id;
+
+    public Player(int id) {
+        this.id = id;
+        hand = new ArrayList<>();
     }
-
-
-
 
     public Team getTeam() {
         return team;
@@ -66,13 +71,7 @@ public  abstract class  Player {
         this.index = index;
     }
 
-
-    public  abstract  SuitName hokme();
-    public  abstract  void playCard();
-
-
-
-
-
+    public abstract SuitName hokme(GameState state);
+    public abstract Card playCard(GameState state);
 
 }

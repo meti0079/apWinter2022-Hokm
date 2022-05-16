@@ -1,9 +1,8 @@
-package Listeners;
+package listeners;
 
 import gui.FirstPanel;
 import gui.GamePanel;
 import gui.MainFrame;
-import main.Main;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -2,6 +2,8 @@ package model;
 
 import java.util.ArrayList;
 
+import model.player.Player;
+
 public class Team {
 
     private int point;
@@ -9,15 +11,12 @@ public class Team {
     private int score;
     private ArrayList<Player> teamPlayer;
 
-
-    public Team(Player player1,Player player2){
+    public Team(Player player1, Player player2){
 
         teamPlayer= new ArrayList<>();
         teamPlayer.add(player1);
         teamPlayer.add(player2);
     }
-
-
 
     public int getPoint() {
         return point;

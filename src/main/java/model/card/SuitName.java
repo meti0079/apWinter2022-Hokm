@@ -1,11 +1,11 @@
-package model;
+package model.card;
 
 public enum SuitName {
 
-    Heart  (0),
-    Diamond (1),
-    Spade  (2),
-    Club (3)
+    HEART (0),
+    DIAMOND (1),
+    SPADE  (2),
+    CLUB (3)
     ;
 
     private final int value;
@@ -18,7 +18,7 @@ public enum SuitName {
     }
     public static SuitName getSuitName(int value){
          if (value==0){
-             return Heart;
+             return HEART;
          }
 
 //         return  ;

@@ -1,4 +1,4 @@
-package model;
+package model.card;
 
 import java.util.ArrayList;
 
@@ -16,11 +16,11 @@ public class CardList {
         diamond = new ArrayList<>();
         heart = new ArrayList<>();
 
-        for (ValueName valueName : ValueName.values()) {
-            club.add(new Card(SuitName.Club, valueName));
-            diamond.add(new Card(SuitName.Diamond, valueName));
-            heart.add(new Card(SuitName.Heart, valueName));
-            spade.add(new Card(SuitName.Spade, valueName));
+        for (CardValueName valueName : CardValueName.values()) {
+            club.add(new Card(SuitName.CLUB, valueName));
+            diamond.add(new Card(SuitName.DIAMOND, valueName));
+            heart.add(new Card(SuitName.HEART, valueName));
+            spade.add(new Card(SuitName.SPADE, valueName));
         }
     }
 

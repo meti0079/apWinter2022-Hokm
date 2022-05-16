@@ -2,9 +2,9 @@ package gui;
 
 import config.PanelConfig;
 import game.GameState;
-import model.Card;
-import model.SuitName;
-import model.ValueName;
+import model.card.Card;
+import model.card.CardValueName;
+import model.card.SuitName;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -45,10 +45,10 @@ public class GamePanel extends JPanel {
         setBotHands(1);
         setBotHands(2);
         setBotHands(3);
-        setOnTable(new Card(SuitName.Club, ValueName.Four), 0);
-        setOnTable(new Card(SuitName.Spade, ValueName.Ace), 1);
-        setOnTable(new Card(SuitName.Diamond, ValueName.Ace), 2);
-        setOnTable(new Card(SuitName.Heart, ValueName.Ace), 3);
+        setOnTable(new Card(SuitName.CLUB, CardValueName.Four), 0);
+        setOnTable(new Card(SuitName.SPADE, CardValueName.Ace), 1);
+        setOnTable(new Card(SuitName.DIAMOND, CardValueName.Ace), 2);
+        setOnTable(new Card(SuitName.HEART, CardValueName.Ace), 3);
         setHokme("spade");
         repaint();
         revalidate();

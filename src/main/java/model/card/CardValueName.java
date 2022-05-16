@@ -1,6 +1,6 @@
-package model;
+package model.card;
 
-public enum ValueName {
+public enum CardValueName {
     Two		(2),
     Three	(3),
     Four	(4),
@@ -16,22 +16,20 @@ public enum ValueName {
     Ace		(14)
     ;
 
-
-
     private final int value;
-     ValueName(int val){
+     CardValueName(int val){
          value=val;
      }
      public int getValue(){
          return this.value;
      }
 
-    public static ValueName getValueName(int v) {
-        for(ValueName value: ValueName.values()){
+    public static CardValueName getValueName(int v) {
+        for(CardValueName value: CardValueName.values()){
             if(value.getValue()==v){
                 return value;
             }
         }
-        return ValueName.Two;
+        return CardValueName.Two;
     }
 }

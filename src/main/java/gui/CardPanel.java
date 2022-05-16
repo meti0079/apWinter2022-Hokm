@@ -1,10 +1,11 @@
 package gui;
 
-import Listeners.CardListener;
-import model.Card;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
+
+import listeners.CardListener;
+import model.card.Card;
+
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
